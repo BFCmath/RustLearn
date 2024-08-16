@@ -17,3 +17,14 @@
 
 ## Literal_Operator.rs
 + Nearly the same as python. 
+
+## Tuple
++ Nearly the same as list numpy
++ Can debug print when < 12 elements
++ Access elements by .0 .1 insteads of [0], [1] like others
++ Can destructure like in Python
++ To create one element tuples, the comma is required to tell them apart from a literal surrounded by parentheses. 
+    + `println!("One element tuple: {:?}", (5u32,)); \\ (5,)`
+    + `println!("Just an integer: {:?}", (5u32)); \\ 5`
++ function seems to look like ipynb, note that do not need `return`
+
