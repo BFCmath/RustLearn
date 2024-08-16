@@ -14,3 +14,6 @@
 + A mutable variable's value can be changed: `mut`
 + The type of a variable can't be changed.
 + Variables can be overwritten with shadowing.
+
+## Literal_Operator.rs
++ Nearly the same as python. 
