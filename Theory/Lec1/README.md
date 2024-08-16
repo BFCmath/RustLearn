@@ -27,6 +27,7 @@
 + Read more about [Tuple struct and Struct](https://stackoverflow.com/questions/30339831/what-are-some-use-cases-for-tuple-structs). *TLDR*: Tuple struct is struct with unnamed fields, while struct is nearly the same in C++.
 + To use the `{}` marker, the trait `fmt::Display` must be implemented. Read [here](https://stackoverflow.com/questions/69477460/is-rust-trait-the-same-as-java-interface) for trait. *TLDR*: now, consider it as interface.
 + Implementing `fmt::Display` for a structure where the elements must each be handled sequentially is tricky. The problem is that each `write!` generates a `fmt::Result`. Proper handling of this requires dealing with all the results. Rust provides the `?` operator for exactly this purpose.
-    + `write!(f, "{}", value)?;`
+    + `write!(f, "{}", value)?;` (see formatList.rs for better understanding).
++ `Vec`: Seem to be vector in C++, looking for it later (tbd)
 
 
