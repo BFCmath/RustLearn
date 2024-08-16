@@ -28,3 +28,15 @@
     + `println!("Just an integer: {:?}", (5u32)); \\ 5`
 + function seems to look like ipynb, note that do not need `return`
 
+## Array_Slice.rs
++ Array is like in C++
+    + `let xs: [i32; 5] = [1, 2, 3, 4, 5];`
+    + `let ys: [i32; 500] = [0; 500]; \\init with same value` 
++ Access in array through `[0], [1]`
++ `len` return the count of elements.
++ Arrays can be safely accessed using `.get` and `match`.
+
++ Slices are similar to arrays, but **their length** is not known at compile time.
++ Slices can be used to **borrow** a section of an array and have the type signature `&[T]`.
+
++ *Note*: arrays are like static arrays in C++ and slices are like dynamic allocated arrays in C++. Using slices give you more because of unknow size.
