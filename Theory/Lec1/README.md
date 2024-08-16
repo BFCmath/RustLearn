@@ -30,4 +30,8 @@
     + `write!(f, "{}", value)?;` (see formatList.rs for better understanding).
 + `Vec`: Seem to be vector in C++, looking for it later (tbd)
 
+## Formating.rs
++ `'static` is a special lifetime in Rust. It lasts for the entire duration of the program.
++ lifetime: looking for it later (tbd)
+
 
