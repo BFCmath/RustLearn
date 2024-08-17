@@ -29,7 +29,7 @@
 - `assert_eq!`: This is a macro used for testing equality in Rust.
 
 ## To_FromString.rs
-- To convert any type to a `String` is as simple as implementing the `ToString` trait for the type. Rather than doing so directly, you should implement the `fmt::Display` trait which automagically provides `ToString` and also allows printing the type as discussed [here](Theory/Lec1/README.md).
+- To convert any type to a `String` is as simple as implementing the `ToString` trait for the type. Rather than doing so directly, you should implement the `fmt::Display` trait which automagically provides `ToString` and also allows printing the type as discussed [here](../Lec1/README.md).
 - It's useful to convert strings into many types, but one of the more common string operations is to convert them from string to number. 
     ```rust
     let parsed: i32 = "5".parse().unwrap();
