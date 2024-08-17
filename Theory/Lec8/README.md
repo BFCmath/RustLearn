@@ -13,3 +13,17 @@
             n / 2 // expression return the same type
         }; // semicolon
     ```
+## loop.rs
+- Rust provides a `loop` keyword to indicate an infinite loop.
+- `break` and `continue` are used like other languages.
+- Label a `loop` with `'label` can help to break or continue outer loops when dealing with nested loops.
+- **Note**: `'static` is not a `label`
+- Return from loops: put value after the break, and it will be returned by the loop expression.
+- **Note**: 
+    + You need to return the same type.
+    + `break;` will return `()` just like `if`
+    + You dont need to have a semicolon at the end of break.
+    + You can also use `'label`.
+        ```
+        break 'outer 5;
+        ```
