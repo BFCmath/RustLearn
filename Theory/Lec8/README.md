@@ -51,3 +51,24 @@
             }
         }
         ```
+
+## match.rs
++ like C++ switch, but auto break at the end and can stack:
+    + `2 | 3 | 5 | 7 | 11`
+    + `13..=19`
+    + `_`: default
++ `match` is an expression. 
+## destructing.rs
++ `..` can be used to ignore the rest of the tuple
++ Single values can be ignored with `_`
++ `name@..` captures all remaining elements (if any) into a slice named `name`
++ `ref`: get reference/pointer of a var 
+    ```rs
+    let ref _is_a_reference = 3;
+    ```
++ You do not need a match block to destructure structs:
+    ```rs
+    let faa = Foo { x: (1, 2), y: 3 };
+    let Foo { x : x0, y: y0 } = faa;
+    ```
+**note**: format print a pointer normally will print its value instead of itself. In order to print pointer, use `{:p}`
