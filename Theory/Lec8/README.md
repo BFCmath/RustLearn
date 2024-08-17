@@ -79,4 +79,16 @@
 
 ## binding.rs
 + `match` provides the `@` sigil for binding values to names.
-+
+
+## iflet.rs 
++ For some use cases, when matching enums, `match` is awkward. `if let` is cleaner for this use case and in addition allows various failure options to be specified.
++ Another benefit is that if let allows us to match non-parameterized enum variants. 
+    + This is true even in cases where the enum doesn't implement or derive PartialEq. 
+    + In such cases if Foo::Bar == a would fail to compile, because instances of the enum cannot be equated, however if let will continue to work.
+
+## letelse.rs
++ With `let-else`, a refutable pattern can match and bind variables in the surrounding scope like a normal `let`, or `else` diverge (e.g. `break`, `return`, `panic!`) when the pattern doesn't match.
+
+## whilelet.rs
++ Similar to `if let`, `while let` can make awkward match sequences more tolerable
+
