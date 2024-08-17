@@ -27,3 +27,6 @@
         ```
         break 'outer 5;
         ```
+
+## while.rs
+- Same as other languages and `loop`
