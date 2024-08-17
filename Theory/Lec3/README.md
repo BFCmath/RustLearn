@@ -20,4 +20,12 @@
 + hard-code string is string slice (`&str`). To change type to String, use `.to_owned()` or `String::from()`
 + Type alias: refer to each enum variant via its alias. This might be useful if the enum's name is too long or too generic, and you want to rename it. The most common place you'll see this is in `impl` blocks using the `Self` alias.
 
+## use.rs
++ The `use` declaration can be used so manual scoping isn't needed:
+    ```rust
+    use crate::Stage::{Beginner, Advanced};
+    // Automatically `use` each name inside `Role`.
+    use crate::Role::*;
+    ```
++ crate: A crate can be thought of as a tree of modules that produces a library or executable. It's similar to a 'package' in some other languages
 
