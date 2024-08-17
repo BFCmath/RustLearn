@@ -8,4 +8,16 @@
     + `let b = Point{z:1.0,..a};`
     + `println!("{:?}",b) \\Point { x: 10.0, y: 5.0, z: 1.0 }`
 
+## enum.rs
++ nearly the same as C++
++ match is nearly the same as switch case
+    ```rust
+    match sth{
+        a => do sth,
+        b => do sth,
+    }
+    ```
++ hard-code string is string slice (`&str`). To change type to String, use `.to_owned()` or `String::from()`
++ Type alias: refer to each enum variant via its alias. This might be useful if the enum's name is too long or too generic, and you want to rename it. The most common place you'll see this is in `impl` blocks using the `Self` alias.
+
 
