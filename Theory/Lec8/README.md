@@ -30,3 +30,24 @@
 
 ## while.rs
 - Same as other languages and `loop`
+
+## for_range.rs
+- The `for` `in` construct can be used to iterate through an `Iterator`. 
+- One of the easiest ways to create an iterator is to use the range notation `a..b`. This yields values from `a` (inclusive) to `b` (exclusive) in steps of one.
+- `a..=b` can be used for a range that is inclusive on both ends.
+### iterators
++ `into_iter`, `iter` and `iter_mut` all handle the conversion of a collection into an iterator in different ways, by providing different views on the data within.
+    + `iter` - This borrows each element of the collection through each iteration. Thus leaving the collection untouched and available for reuse after the loop.
+    + `into_iter` - This consumes the collection so that on each iteration the exact data is provided. Once the collection has been consumed it is no longer available for reuse as it has been 'moved' within the loop.
+    + `iter_mut` - This mutably borrows each element of the collection, allowing for the collection to be modified in place.
++ **Note**: 
+    + `iter_mut()` provides `&mut T` instead of `T`, so we do need to add `&mut` when compare.
+    + `&mut` is a mutable reference, so we do need to dereference  before assigning.
+        ```rust
+        for name in names.iter_mut() {
+            *name = match name {
+                &mut "Ferris" => "There is a rustacean among us!", 
+                _ => "Hello",
+            }
+        }
+        ```
