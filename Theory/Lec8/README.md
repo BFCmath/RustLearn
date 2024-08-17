@@ -72,3 +72,11 @@
     let Foo { x : x0, y: y0 } = faa;
     ```
 **note**: format print a pointer normally will print its value instead of itself. In order to print pointer, use `{:p}`
+
+## guard.rs 
++ A `match` *guard* can be added to filter the arm.
++ Note that the compiler won't take guard conditions into account when checking if all patterns are covered by the match expression.
+
+## binding.rs
++ `match` provides the `@` sigil for binding values to names.
++
