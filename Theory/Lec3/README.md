@@ -29,3 +29,9 @@
     ```
 + crate: A crate can be thought of as a tree of modules that produces a library or executable. It's similar to a 'package' in some other languages
 
+## constants.rs
++ `const`: An unchangeable value (the common case).
++ `static`: A possibly mutable variable with `'static` lifetime. The `static` lifetime is inferred and does not have to be specified. Accessing or modifying a mutable `static` variable is unsafe.
+
+
+## linked-list in rust: TBD 
