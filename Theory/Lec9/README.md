@@ -82,3 +82,8 @@
                 f(3)
             }
         ```
+
+## as_output_parameter.rs
++ Anonymous closure types are, by definition, unknown, so we have to use `impl Trait` to return them.
++ Beyond this, the `move` keyword must be used, which signals that all captures occur by value. This is required because any captures by reference would be dropped as soon as the function exited, leaving invalid references in the closure.
+
