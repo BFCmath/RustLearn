@@ -65,3 +65,20 @@
     + `Box`: A non-copy type.  
     + `mem::drop` requires `T` so this must take by value. 
     + `Vec`: has non-copy semantics.
+
+## as_input_parameter.rs
++ When taking a closure as an input parameter, the closure's complete type must be annotated:
+    + `Fn`: the closure uses the captured value by reference (`&T`)
+    + `FnMut`: the closure uses the captured value by mutable reference (`&mut T`)
+    + `FnOnce`: the closure uses the captured value by value (`T`)
++ On a variable-by-variable basis, the compiler will capture variables in the least restrictive manner possible.
++ **Note**:
+    + `.to_owned()`: creates owned data from borrowed one and change from `&str` to `String`.
+    + A function which takes a closure as an argument and calls it.
+    + <F> denotes that F is a "Generic type parameter"
+        ```rs
+        fn apply_to_3<F>(f: F) -> i32 where
+            F: Fn(i32) -> i32 {
+                f(3)
+            }
+        ```
