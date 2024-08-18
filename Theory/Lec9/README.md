@@ -87,8 +87,11 @@
 + Anonymous closure types are, by definition, unknown, so we have to use `impl Trait` to return them.
 + Beyond this, the `move` keyword must be used, which signals that all captures occur by value. This is required because any captures by reference would be dropped as soon as the function exited, leaving invalid references in the closure.
 
-# hof.rs
+## hof.rs
 + Rust provides Higher Order Functions (HOF).
 + These are functions that take one or more functions and/or produce a more useful function. 
 + HOFs and lazy iterators give Rust its functional flavor.
 + **Note**: just like **numpy** but with **lazy iterators**
+
+## diverging_function.rs
++ Diverging functions never return. They are marked using `!`, which is an empty type.
