@@ -34,3 +34,11 @@
     + You can have either one mutable reference or any number of immutable references, but not both at the same time.
     + References must always be valid (no dangling references).
 
+
+## closure.rs
++ Closures are functions that can capture the enclosing environment.
++ Other characteristics of closures include:
+    + using `||` instead of `()` around input variables.
+    + optional body delimitation (`{}`) for a single line expression (mandatory otherwise).
+    + the ability to capture the outer environment variables.
+
