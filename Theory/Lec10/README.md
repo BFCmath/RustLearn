@@ -12,3 +12,16 @@
 + Functions declared using `pub(super)` syntax are only visible within the parent module
 + `pub(crate)` makes functions visible only within the current crate
 + Nested modules follow the same rules for visibility
+
+## struct_visibility.rs
++ Structs have an extra level of visibility with their fields. 
++ The visibility defaults to private, and can be overridden with the `pub` modifier. 
++ This visibility only matters when a struct is accessed from outside the module where it is defined, and has the goal of hiding information (encapsulation).
+
++ **Note**:
+    + implement a struct with generic type:
+        ```rs
+        impl<T> ClosedBox<T> {
+            
+        }
+        ``` 
