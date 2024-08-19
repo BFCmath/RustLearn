@@ -47,3 +47,23 @@
     ```
 + To build our project we can execute `cargo build` anywhere in the project directory (including subdirectories!)
 + We can also do `cargo run` to build and run.
+
+## Conventions
++  The default binary name is `main`, as we saw before, but you can add additional binaries by placing them in a `bin/` directory:
+    ```bash
+    foo## Build Scripts
+    + TBD...
+    
+    ├── Cargo.toml
+    └── src
+        ├── main.rs
+        └── bin
+            └── my_other_bin.rs
+    ```
++ To tell `cargo` to only compile or run this binary, we just pass `cargo` the `--bin my_other_bin flag`, where `my_other_bin` is the name of the binary we want to work with.
+
+## Tesing
++ TBD...
+
+## Build Scripts
++ TBD...
