@@ -25,3 +25,19 @@
             
         }
         ``` 
+
+## use 
+exactly like `import` in python.
+
+## super and self
+exactly like in python.
+
+## file_hierarchy
++ When you declare a module using mod, the compiler looks for the module's contents in several places:
+    + Inline, within curly braces after mod declaration.
+    + In a file with the same name as the module in the current directory.
+    + In a file named mod.rs in a subdirectory named after the module.
+        ```rs
+        pub mod nested;
+        mod inaccessible;
+        ```
