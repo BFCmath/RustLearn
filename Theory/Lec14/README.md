@@ -43,3 +43,35 @@
     }
     ```
 
++ **Note**: 
+    + `Reference Transparency`: In Rust, when you have a reference to a type, you can access its fields and methods as if you were working with the type directly.
+        ```rs
+        fn is_adult(age: &Years) -> bool {
+            age.0 >= 18
+        }
+        ```
+## associated_item.rs
++ The use of "Associated types" improves the overall readability of code by moving inner types locally into a trait as output types.
+    ```rs
+    // Without using associated types
+    fn difference<A, B, C>(container: &C) -> i32 where
+        C: Contains<A, B> { ... }
+    // Using associated types
+    fn difference<C: Contains>(container: &C) -> i32 { ... }
+    ```
+    ```rs
+    trait Contains {
+        // Define generic types here which methods will be able to utilize.
+        type A;
+        type B;
+    }
+    
+    impl Contains for Container {
+        type A = i32;
+        type B = i32;
+    }
+    ```
++ **Note**: `type` in this context is different from `type` when used for aliases
+
+## Phantom Type 
++ TBD...
