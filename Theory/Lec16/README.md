@@ -22,3 +22,11 @@
     ```rs
     Box<dyn Animal>
     ```
+
+## operator_overloading.rs
++ many of the operators can be overloaded via traits.
++ This is possible because operators are syntactic sugar for method calls. 
+
+## drop.rs
++ The `Drop` trait only has one method: `drop`, which is called automatically when an object goes out of scope.
++ The main use of the `Drop` trait is to free the resources that the implementor instance owns.
