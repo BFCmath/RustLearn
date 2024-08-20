@@ -14,3 +14,10 @@
     ```rs
     impl<T> GenericVal<T> {}
     ```
+## traits.rs
++ `trait`s can also be generic.
+    ```rs
+    impl<T, U> DoubleDrop<T> for U {
+        fn double_drop(self, _: T) {}
+    }
+    ```
