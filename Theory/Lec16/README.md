@@ -15,3 +15,10 @@
     + `Debug`, to format a value using the `{:?}` formatter.
 
 
+## dyn.rs
++ The Rust compiler needs to know how much space every function's return type requires. This means all your functions have to return a concrete type. 
++ However, there's an easy workaround. Instead of returning a `trait` object directly, our functions return a `Box` which contrain the `trait`.
++ if your function returns a `pointer-to-trait-on-heap` in this way, you need to write the return type with the `dyn` keyword.
+    ```rs
+    Box<dyn Animal>
+    ```
