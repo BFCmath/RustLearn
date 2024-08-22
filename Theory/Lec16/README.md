@@ -12,7 +12,7 @@
     + `Copy`, to give a type 'copy semantics' instead of 'move semantics'.
     + `Hash`, to compute a hash from `&T`.
     + `Default`, to create an empty instance of a data type.
-    + `Debug`, to format a value using the `{:?}` formatter.
+    + `Debug`, to formant a value using the `{:?}` formatter.
 
 
 ## dyn.rs
@@ -30,3 +30,7 @@
 ## drop.rs
 + The `Drop` trait only has one method: `drop`, which is called automatically when an object goes out of scope.
 + The main use of the `Drop` trait is to free the resources that the implementor instance owns.
+
+## iterator.rs
++ The Iterator trait is used to implement iterators over collections such as arrays.
++ The trait requires only a method to be defined for the next element, which may be manually defined in an impl block or automatically defined (as in arrays and ranges).
