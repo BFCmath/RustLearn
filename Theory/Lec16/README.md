@@ -46,3 +46,16 @@
 
 ## clone.rs
 + Sometimes we need to make a copy of the resource. The `Clone` trait helps us do exactly this.
+
+## Supertraits
++ Rust doesn't have "inheritance", but you can define a trait as being a superset of another trait. 
+    ```rs
+    trait CompSciStudent: Programmer + Student
+    ```
+
+## Disambiguating overlapping traits
+```rs
+impl UsernameWidget for Form
+impl AgeWidget for Form
+let username = <Form as UsernameWidget>::get(&form);
+```
