@@ -43,3 +43,6 @@
 + If your function returns a type that implements `MyTrait`, you can write its return type as -> impl `MyTrait`
 + More importantly, some Rust types can't be written out. For example, every `closure` has its own unnamed concrete type. 
 + You can also use `impl Trait` to return an iterator that uses `map` or `filter` `closures`! This makes using map and filter easier.
+
+## clone.rs
++ Sometimes we need to make a copy of the resource. The `Clone` trait helps us do exactly this.
