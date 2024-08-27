@@ -9,3 +9,12 @@
     + `None`: No element was found
 + These cases can either be explicitly handled via `match` or implicitly with `unwrap`. 
 + Implicit handling will either return the inner element or panic.
+### Unpacking options with ?
++ You can unpack `Options` by using match statements, but it's often easier to use the `?` operator. 
++ If `x` is an `Option`, then evaluating `x?` will return the underlying value if `x` is `Some`, otherwise it will terminate whatever function is being executed and return `None`.
+### Mapping
++ Option has a built in method called map(), a combinator for the simple mapping of Some -> Some and None -> None.
++ Multiple map() calls can be chained together for even more flexibility.
+### And then
++  Chaining multiple calls together can then become confusing. That's where another combinator called `and_then()`, known in some languages as flatmap, comes in.
++ `and_then()` calls its function input with the wrapped value and returns the result. If the `Option` is `None`, then it returns `None` instead.
