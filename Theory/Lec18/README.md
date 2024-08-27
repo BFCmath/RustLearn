@@ -18,3 +18,10 @@
 ### And then
 +  Chaining multiple calls together can then become confusing. That's where another combinator called `and_then()`, known in some languages as flatmap, comes in.
 + `and_then()` calls its function input with the wrapped value and returns the result. If the `Option` is `None`, then it returns `None` instead.
+
+## result.rs
++ `Result` is a richer version of the `Option` type that describes possible error instead of possible absence.
++ That is, `Result<T, E>` could have one of two outcomes:
+    + `Ok(T)`: An element `T` was found
+    + `Err(E)`: An error was found with element `E`
++ By convention, the expected outcome is `Ok` while the unexpected outcome is `Err`.
