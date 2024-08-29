@@ -30,6 +30,10 @@
         + `_` is a wildcard pattern that matches any value.
         + Importantly, it does not bind the value to a variable.
         + Because it doesn't bind the value, it also doesn't move or copy the value.
+    + Mutability is not inherited through ownership transfer.
+    + To make `y` mutable when taking ownership, you need to explicitly declare it as mutable: `let mut y = x`;
+    + You can have a mutable reference to a mutable variable, but not to an immutable variable.
+    + You can have a immutable variable reference to a mutable variable.
 ## Lifetimes
 + A lifetime is a construct the compiler (or more specifically, its borrow checker) uses to ensure all borrows are valid.
 + Specifically, a variable's lifetime begins when it is created and ends when it is destroyed. 
