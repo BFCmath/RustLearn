@@ -22,6 +22,10 @@
     let pangram: &'static str = "the quick brown fox jumps over the lazy dog";
     let alice = String::from("I like dogs");
     ```
++ **Note**:
+    + Rust strings don’t support indexing.
+    + Rather than indexing using `[]` with a single number, you can use `[]` with a range to create a string slice containing particular bytes.
+    + 
 ## hashmap.rs
 + `HashMap` keys can be booleans, integers, strings, or any other type that implements the `Eq` and `Hash` traits. More on this in the next section.
 + Takes a reference and returns `Option<&V>`
