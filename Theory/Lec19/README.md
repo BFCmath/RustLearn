@@ -31,6 +31,24 @@
 + Takes a reference and returns `Option<&V>`
 + `HashMap::iter()` returns an iterator that yields `(&'a key, &'a value)` pairs in arbitrary order.
 + Any type that implements the `Eq` and `Hash` traits can be a key in `HashMap`
++ **Note**:
+    + Way to insert: 
+        ```rs
+        let content = [(Fruit::Apple, 4), (Fruit::Mango, 2), (Fruit::Lychee, 5)];
+        HashMap::from_iter(content)
+        ```
+    + Way to insert if not exist:
+        ```rs
+        basket.entry(fruit).or_insert(1);
+        ```
+    +  The `or_insert` method returns a mutable reference `(&mut V)` to the value for the specified key.
+    + Way to modify:
+        ```rs
+        scores.entry(team_1_name)
+            .and_modify(|scores: &mut TeamScores|{
+                ...
+            });
+        ```
 
 ## hashset.rs
 + A `HashSet`'s unique feature is that it is guaranteed to not have duplicate elements.
