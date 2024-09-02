@@ -1,5 +1,5 @@
 # Learn Rust
-Welcome to my Rust self-learning repository! This repository serves as a personal tracker for my progress in learning Rust, combining both theory and practice.
+Welcome to my Rust self-learning repository! This repository serves as a personal tracker for my progress in learning Rust, combining both theory and practice. If you're also on the journey to learn Rust, feel free to use this repository as a resource.
 ## Resources
 + **Theory**: Follow the official Rust documentation [here](https://doc.rust-lang.org/rust-by-example/index.html).
 + **Practice**: Work through exercises from the [Rustlings repository](https://github.com/rust-lang/rustlings).
@@ -32,4 +32,16 @@ The notes in this repository summarize key concepts from the [Rust documentation
 + Some sections are marked as *TBD* and may be covered in the future. For more detailed information, refer to the [Rust documentation](https://doc.rust-lang.org/rust-by-example/index.html).
 + It’s recommended to read from the beginning, as some lectures build on concepts covered in earlier ones.
 
+
 ## Exercises
+
+This section contains exercises sourced from the [Rustlings repository](https://github.com/rust-lang/rustlings). 
+
+**NOTE for learners**:
+
++ It is recommended to read the theory section first to better understand the concepts before attempting the exercises.
++ Some exercises are currently incomplete and may be added in the future.
+
+---
+
+Thank you for checking out my Rust learning journey. 
