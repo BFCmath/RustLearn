@@ -15,6 +15,8 @@
 ### Mapping
 + Option has a built in method called map(), a combinator for the simple mapping of Some -> Some and None -> None.
 + Multiple map() calls can be chained together for even more flexibility.
++ **Note**:
+    + `flat_map` is an iterator adapter method in Rust that allows you to transform each item in an iterator into another iterator, and then flatten the resulting iterators into a single iterator.
 ### And then
 +  Chaining multiple calls together can then become confusing. That's where another combinator called `and_then()`, known in some languages as flatmap, comes in.
 + `and_then()` calls its function input with the wrapped value and returns the result. If the `Option` is `None`, then it returns `None` instead.
